@@ -1,25 +1,37 @@
-# 8086-transaction-simulator
 # 8086 Hardware-Level Transaction Simulator
 
 ## Overview
-This project simulates a basic transaction system using 8086 Assembly,
-focusing on how low-level hardware operations can be used to enforce
-atomicity and consistency.
+This project is a conceptual simulation developed in 8086 Assembly to study
+instruction-level execution, register usage, and interrupt control in a
+hardware-oriented environment.
 
-The project was built as part of a computer organization study to
-understand instruction execution, memory usage, and interrupts.
+The goal of the project is to understand how low-level mechanisms can be used
+to model critical sections and atomic-style behavior.
 
-## Core Concepts
-- Register-level data movement
-- Interrupt Service Routines (ISRs)
-- Stack management
-- Atomic execution using controlled interrupts
+---
 
-## What This Project Demonstrates
-- Comfort with low-level programming
-- Understanding of hardware-software interaction
-- Ability to reason about correctness at the instruction level
+## Core Concepts Explored
+- Register-level arithmetic and data movement
+- Stack usage and program flow
+- Interrupt control using CLI/STI instructions
+- Modeling critical sections at the instruction level
 
-## Environment
-- 8086 Assembly
-- Emu8086 / DOSBox-style environment
+---
+
+## Transaction Model
+The simulator represents a simplified transaction flow where:
+- Interrupts are disabled during a critical update phase
+- Shared state is modified in a controlled manner
+- Interrupts are restored after the operation completes
+
+This approach mirrors how atomicity concepts are reasoned about at the
+hardware–software boundary.
+
+---
+
+## Scope & Intent
+This project is intended for educational purposes to reinforce concepts from
+computer organization and low-level systems programming.
+
+It is not a real banking system or hardware emulator, but a focused study of
+how correctness and consistency can be reasoned about at the assembly level.
